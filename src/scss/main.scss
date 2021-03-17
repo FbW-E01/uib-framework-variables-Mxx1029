@@ -1,4 +1,14 @@
 // This is where you can import other stylesheets or write your scss code
+$color-palette: (
+    "card-green": #e0ddb2
+    "border-green": #dad6ab
+    "nav-foot-blue": #016690
+    "off-white": #eee
+);
+
+$h2-h3-size: 1.5rem;
+$p-height: 1.25rem;
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 * {
@@ -16,7 +26,7 @@ nav {
         li {
             list-style-type: none;
             padding: .5rem;
-            color: #016690;
+            color: map-get($color-palette, "nav-foot-blue");
         }
     }
 }
@@ -41,10 +51,10 @@ nav {
     flex-direction: column;
     margin: 1.5rem 0.75rem;
     .img-card {
-        background-color: #e0ddb2;
+        background-color: map-get($color-palette, "card-green");
         padding: 1rem;
         margin: 1rem 0;
-        border: 2px solid #dad6ab;
+        border: 2px solid map-get($color-palette, "border-green");
         border-radius: 5px;
         .img-container {
             height: 150px;
@@ -63,12 +73,12 @@ nav {
         }
         .card-content {
             h2 {
-                font-size: 1.5rem;
+                font-size: $h2-h3-size;
                 font-weight: 700;
                 margin: .75rem 0 0;
             }
             p {
-                line-height: 1.25rem;
+                line-height: $p-height;
             }          
         }
     }
@@ -79,32 +89,32 @@ nav {
     flex-direction: column;
     margin: 1.5rem 0.75rem;
     aside {
-        border: 2px solid #dad6ab;
+        border: 2px solid map-get($color-palette, "border-green");
         padding: 1rem;
         h3 {
-            font-size: 1.5rem;
+            font-size: $h2-h3-size;
             font-weight: 700;
             margin: .75rem 0 0;
         }
         p {
-            line-height: 1.25rem;
+            line-height: $p-height;
         }
     }
     article {
         padding: 1rem;
         h2 {
-            font-size: 1.5rem;
+            font-size: $h2-h3-size;
             font-weight: 700;
             margin: .75rem 0 0;
         }
         p {
-            line-height: 1.25rem;
+            line-height: $p-height;
         }
     }
 }
 
 footer {
-    background-color: #016690;
+    background-color: map-get($color-palette, "nav-foot-blue");
     width: 100%;
     ul {
         display: flex;
@@ -115,7 +125,7 @@ footer {
             list-style-type: none;
             padding: .5rem;
             a {
-                color: #eee;
+                color: map-get($color-palette, "off-white");
             }
         }
     }

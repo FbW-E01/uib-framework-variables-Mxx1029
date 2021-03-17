@@ -1,9 +1,9 @@
 // This is where you can import other stylesheets or write your scss code
 $color-palette: (
-    "card-green": #e0ddb2,
-    "border-green": #dad6ab,
-    "nav-foot-blue": #016690,
-    "off-white": #eee,
+    "card-color": #e0ddb2,
+    "border-color": #dad6ab,
+    "nav-foot-color": #016690,
+    "white": #eee,
 );
 
 $h2-h3-size: 1.5rem;
@@ -26,7 +26,7 @@ nav {
         li {
             list-style-type: none;
             padding: .5rem;
-            color: map-get($color-palette, "nav-foot-blue");
+            color: map-get($color-palette, "nav-foot-color");
         }
     }
 }
@@ -51,10 +51,10 @@ nav {
     flex-direction: column;
     margin: 1.5rem 0.75rem;
     .img-card {
-        background-color: map-get($color-palette, "card-green");
+        background-color: map-get($color-palette, "card-color");
         padding: 1rem;
         margin: 1rem 0;
-        border: 2px solid map-get($color-palette, "border-green");
+        border: 2px solid map-get($color-palette, "border-color");
         border-radius: 5px;
         .img-container {
             height: 150px;
@@ -89,7 +89,7 @@ nav {
     flex-direction: column;
     margin: 1.5rem 0.75rem;
     aside {
-        border: 2px solid map-get($color-palette, "border-green");
+        border: 2px solid map-get($color-palette, "border-color");
         padding: 1rem;
         h3 {
             font-size: $h2-h3-size;
@@ -114,7 +114,7 @@ nav {
 }
 
 footer {
-    background-color: map-get($color-palette, "nav-foot-blue");
+    background-color: map-get($color-palette, "nav-foot-color");
     width: 100%;
     ul {
         display: flex;
@@ -125,7 +125,7 @@ footer {
             list-style-type: none;
             padding: .5rem;
             a {
-                color: map-get($color-palette, "off-white");
+                color: map-get($color-palette, "white");
             }
         }
     }
